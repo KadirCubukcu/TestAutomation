@@ -7,5 +7,4 @@ end
 
 Before('@slow') do
   Capybara.default_wait_time = 60
-  binding.pry
 end
