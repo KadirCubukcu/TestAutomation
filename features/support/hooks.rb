@@ -1,13 +1,11 @@
 #encoding: UTF-8
 
-Around('@fast') do |scenario, block|
-  Timeout.timeout(0.5) do
-    block.call
-  end
+Before('@fast') do
+  binding.pry
+  Capybara.default_wait_time = 1
 end
 
-Around('@slow') do |scenario, block|
-  Timeout.timeout(30) do
-    block.call
-  end
+Before('@slow') do
+  Capybara.default_wait_time = 60
+  binding.pry
 end
