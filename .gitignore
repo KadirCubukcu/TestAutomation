@@ -1,0 +1,4 @@
+# Created by kadircubukcu
+*.gem
+/browsers/
+.idea/
